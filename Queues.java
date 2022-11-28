@@ -1,5 +1,7 @@
 package com.bridgelabz.stackandqueues.stacks;
 
+import com.bridgelabz.stackandqueues.linkedlist.LinkedList;
+
 public class Queues<T> {
     LinkedList<T> linkedList;
 
@@ -12,6 +14,22 @@ public class Queues<T> {
     }
     public void print() {
         linkedList.display();
+    }
+
+    public boolean isEmpty(){
+        if(linkedList.size() == 0)
+            return true;
+        else
+            return false;
+    }
+
+    public T peek(){
+        return linkedList.peek();
+    }
+
+
+    public T dequeue() {
+        return linkedList.pop();
     }
 
 }
